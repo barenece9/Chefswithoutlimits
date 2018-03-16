@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/inner_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_item" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginBottom="5dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/chef_dashboard_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="false"
+            android:layout_marginBottom="15dp"
+            android:weightSum="100" >
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="30" >
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="bottom|right|center"
+                    android:background="@mipmap/logo_box" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="70"
+                android:paddingLeft="5dp" >
+
+                <Button
+                    android:id="@+id/imgChDashOn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/chef_dashon"
+                    android:text="ON" />
+
+                <Button
+                    android:id="@+id/imgChDashOff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imgChDashOn"
+                    android:background="@drawable/chef_dashoff"
+                    android:text="OFF" />
+
+                <!--android:layout_toRightOf="@+id/imgChDashOn"-->
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp" >
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:src="@mipmap/new_order" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:text="20"
+                        android:textColor="#96B100"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="false"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:text="NEW ORDER"
+                        android:textColor="#A57D1F"
+                        android:textSize="7sp" />
+
+                </FrameLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="Kitchen Status"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+
+                <Switch
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:textOn="On"
+                    android:track="@drawable/custom_track"
+                    android:thumb="@drawable/customswitchselector"
+                    android:textOff="Off"
+                    android:textColor="#000000"
+                    android:id="@+id/btn_switch"/>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+
+
+
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/outline_1"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="50dip"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="connect using Dialog"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STRIPE ACCOUNT"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <com.chefswithoutlimits.stripeconnect.StripeButton
+                    android:id="@+id/btnConnect1"
+                    android:layout_height="50dp"
+                    android:layout_width="300dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="2dip"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="connect using Activity"
+                    android:layout_marginTop="60dp"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"/>
+
+                <com.chefswithoutlimits.stripeconnect.StripeButton
+                    android:id="@+id/btnConnect2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="220dip"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dip"/>
+
+                <TextView
+                    android:id="@+id/tvSummary"
+                    android:layout_width="300dp"
+                    android:layout_height="30dp"
+                    android:text="Not connected"
+                    android:background="#ffffff"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="0dip"
+                    android:layout_marginBottom="2dip"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:layout_marginLeft="15dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/btn_edit_part_1"
+                    android:gravity="center"
+                    android:text="Kitchen Details"
+                    android:textColor="#ffffff"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="4dp"
+                    android:background="@color/setting_btn"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/btn_edit_part_2"
+                    android:gravity="center"
+                    android:text="Kitchen Address"
+                    android:textColor="#ffffff"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="4dp"
+                    android:background="@color/setting_btn"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/btn_edit_part_3"
+                    android:gravity="center"
+                    android:text="Location in Map"
+                    android:textColor="#ffffff"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="4dp"
+                    android:background="@color/setting_btn"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

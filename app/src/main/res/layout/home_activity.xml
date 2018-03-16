@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/inner_bg"
+    android:orientation="vertical" >
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"        
+        layout="@layout/header_item" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="false"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btnOrderOnline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/order_online"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:text="ORDER ONLINE"
+            android:textColor="@color/button_text"
+            android:textSize="17sp"
+            android:visibility="visible"/>
+
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/sign_in"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:text="SIGN IN"
+            android:textColor="@color/button_text"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/register"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:text="REGISTER"
+            android:textColor="@color/button_text"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+</RelativeLayout>

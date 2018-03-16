@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chefswithoutlimits">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"> </uses-permission>
+
+    <permission
+        android:name="com.chefswithoutlimits.googlemapsv2.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.chefswithoutlimits.googlemapsv2.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- Required to show current location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- Required OpenGL ES 2.0. for Maps V2 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="com.chefswithoutlimits.appconroller.AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/chef_logo_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.chefswithoutlimits.MainActivity" />
+        >
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.home.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.home.HomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.other.LogintypeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.home.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.customer.registration.CustomerRrgisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.customer.CustomerProfileSettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.registration.ChefEmailVerifyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.customer.CustomerDashboardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.other.ItemListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.other.MapActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.home.RegisterTypeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.registration.ChefRrgisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.customer.cart.CartListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.registration.ChefRrgisterPart2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.other.ChefRrgisterPart3Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.ChefDashboardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.ChefProfileSettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.other.ChefCustomerDetail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.order.ChefOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.other.ChefMenuActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.other.ChefMenuAdd"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.other.ChefOrderItem"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.other.ChefMenuItemDetail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.other.ChefEditMenuActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.other.ChefNewOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.other.ChefKitchenEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- Goolge API Key -->
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!--
+            <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDU5TYUvRXDuqKe_Mwrq86AkY5DWUuFE1c" />
+        -->
+        <!-- android:value="AIzaSyAjtrczGyGZg9m385lN2-phDjdVMdKsAiM" AIzaSyDzZBGJlKAntTEODFdbZOwar_wUzJ2fkO0 -->
+
+
+        <!-- Goolge API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBKrsXBlTX0XLKNRxCmoupglt4h5lFeOB4" />
+
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.menu.ChefMenuActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.menu.category.ChefMenuCategoryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.menu.category.ChefAddMenuCategory"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.menu.category.ChefEditMenuCategory"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.menu.item.ChefMenuItemActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.menu.item.ChefAddMenuItem"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.menu.item.ChefEditMenuItem"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.menu.option.ChefMenuOptionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.menu.option.ChefAddMenuOption"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.menu.option.ChefEditMenuOption"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.ChefSchedular"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.order.ChefOrderDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.customer.search.SearchKitchen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.customer.cart.KitchenDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.other.ShippingDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.customer.checkout.ScheduledDeliveryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.other.DeliveryScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.customer.checkout.ShippingScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.payment.PaymentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.chefs.order.ChefCompleteOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name="com.chefswithoutlimits.Notification.NotificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.customer.checkout.PaymentResponseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+
+        </activity>
+        <activity android:name="com.chefswithoutlimits.customerchef.activity.other.ConnectStripeActivity" />
+        <activity
+            android:name="com.chefswithoutlimits.stripeconnect.StripeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.other.CustomerOpenOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.customer.order.CustomerCompleteOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.chefswithoutlimits.customerchef.activity.customer.order.CustomerOrderDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.chefswithoutlimits.customerchef.activity.chefs.kitchen.ChefEditKitchenPart1"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:name="com.chefswithoutlimits.customerchef.activity.chefs.kitchen.ChefEditKitchenPart2"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:name="com.chefswithoutlimits.customerchef.activity.chefs.kitchen.ChefEditKitchenPart3"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:name="com.chefswithoutlimits.customerchef.activity.chefs.kitchen.ChefEditKitchen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+
+        <activity android:name="com.chefswithoutlimits.customerchef.activity.customer.search.OfflineSearchKitchen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+
+        <activity android:name="com.chefswithoutlimits.customerchef.activity.customer.cart.OfflineKitchenDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+
+        <activity android:name="com.chefswithoutlimits.customerchef.activity.customer.cart.OfflineCartListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+
+        <activity android:name="com.chefswithoutlimits.customerchef.activity.customer.CustomerDeliveryAddressActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+
+        <activity android:name="com.chefswithoutlimits.customerchef.activity.chefs.menu.optionsets.ChefOptionSetsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+
+        <activity android:name="com.chefswithoutlimits.customerchef.activity.chefs.menu.optionsets.ChefOptionSetsAddActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+
+        <activity android:name="com.chefswithoutlimits.customerchef.activity.chefs.menu.optionsets.ChefOptionSetsAttToMenuActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+
+        <activity android:name="com.chefswithoutlimits.customerchef.activity.chefs.menu.optionsets.ChefOptionSetsEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+
+        <service android:name="com.chefswithoutlimits.util.LocationService" />
+
+        <!-- Firebase Notifications -->
+
+        <service android:name="com.chefswithoutlimits.Notification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name="com.chefswithoutlimits.Notification.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- ./Firebase Notifications -->
+    </application>
+
+</manifest>

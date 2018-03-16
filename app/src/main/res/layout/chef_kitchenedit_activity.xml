@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/inner_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_item" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" >
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:text="Opening Time"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <Spinner
+                        android:id="@+id/chefKitchenEditOpenTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/login_txtfld"
+                        android:padding="5dp"                                  
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:text="Closing Time"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <Spinner
+                        android:id="@+id/chefKitchenEditCloseTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/login_txtfld"
+                        android:padding="5dp"                                         
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:text="Kitchen Status"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerVertical="true"
+                        android:textOn="On"
+                        android:track="@drawable/custom_track"
+                        android:thumb="@drawable/customswitchselector"
+                        android:textOff="Off"
+                        android:textColor="#000000"
+                        android:id="@+id/btn_switch"/>
+
+                </LinearLayout>
+
+
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:text="Venue/Kitchen Name"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/chefKithenEditVKName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/login_txtfld"
+                        android:ems="10"
+                        android:hint="Venue/Kitchen Name"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:text="Type of Venue"
+                        android:paddingTop="5dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <Spinner
+                        android:id="@+id/chefKitchenEditVType"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/login_txtfld"
+                        android:padding="5dp"  
+                        android:entries="@array/venueArray"                      
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:text="Address"
+                        android:paddingTop="5dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/chefKithenEditAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/login_txtfld"
+                        android:ems="10"
+                        android:hint="Address"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:paddingTop="5dp"
+                        android:text="Address line 3"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/chefKithenEditAddressLine1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/login_txtfld"
+                        android:ems="10"
+                        android:hint="Optional"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:paddingTop="5dp"
+                        android:text="Address Line 4"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/chefKithenEditAddressline2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/login_txtfld"
+                        android:ems="10"
+                        android:hint="Optional"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:paddingTop="5dp"
+                        android:text="Street Address"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/chefKithenEditStreetAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/login_txtfld"
+                        android:ems="10"
+                        android:hint="Enter Street Address"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:paddingTop="5dp"
+                        android:text="Unit, building, floor, booth, stand number"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/chefKithenEditApt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/login_txtfld"
+                        android:ems="10"
+                        android:hint="Optional"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+                </LinearLayout>
+                
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:paddingTop="5dp"
+                        android:text="Select country"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <Spinner
+                        android:id="@+id/chefKithenEditSpiCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/login_txtfld"
+                        android:entries="@array/countryArray"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+                
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:paddingTop="5dp"
+                        android:text="State/Province/Region"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <Spinner
+                        android:id="@+id/chefKithenEditState"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/login_txtfld"
+                        android:entries="@array/countryArray"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:paddingTop="5dp"
+                        android:text="City"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <Spinner
+                        android:id="@+id/chefKithenEditCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/login_txtfld"
+                        android:entries="@array/countryArray"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:paddingTop="5dp"
+                        android:text="Zip/Postal code"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/chefKithenEditZip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/login_txtfld"
+                        android:ems="10"
+                        android:hint="Enter Zip/Postal code"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp"
+                        android:maxLength="10"
+                        android:inputType="text"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:paddingTop="5dp"
+                        android:text="Latitude"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/chefkitcheneditlatitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/login_txtfld"
+                        android:ems="10"
+                        android:hint="Enter Latitude"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:paddingTop="5dp"
+                        android:text="Longitude"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/chefkitcheneditlongitute"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/login_txtfld"
+                        android:ems="10"
+                        android:hint="Enter Longitude"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:paddingTop="5dp"
+                        android:text="Short description About Your Kitchen"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/chefKithenEditkitchensescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/login_txtfld"
+                        android:ems="10"
+                        android:hint="Enter short description About Your Kitchen"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" >
+
+                            <CheckBox
+                                android:id="@+id/checkBoxPickup"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Pickup" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxDelivery"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/checkBoxPickup"
+                                android:text="Delivery" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxMailOrder"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                 android:layout_below="@id/checkBoxDelivery"
+                                android:text="Mail Order" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/deleveryTypeLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="invisible"
+                            android:layout_weight="1" >
+
+                            <CheckBox
+                                android:id="@+id/checkBoxVehicle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Vehicle" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxBicycle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/checkBoxVehicle"
+                                android:text="Bicycle" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxWalking"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                 android:layout_below="@id/checkBoxBicycle"
+                                android:text="By Foot/Walking" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:paddingTop="5dp"
+                            android:text="Local Tax Rate"
+                            android:textColor="@android:color/white"
+                            android:textSize="15sp"
+                            />
+
+                        <EditText
+                            android:id="@+id/chefKithenEditLocalTaxRate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/login_txtfld"
+                            android:ems="10"
+                            android:hint="Enter Local Tax Rate"
+                            android:inputType="number"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textCursorDrawable="@null"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:paddingTop="5dp"
+                            android:text="Select Currency For Transaction"
+                            android:textColor="@android:color/white"
+                            android:textSize="15sp" />
+
+                        <Spinner
+                            android:id="@+id/chefKithenEditSelectCurrencyForTransaction"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@mipmap/login_txtfld"
+                            android:entries="@array/countryArray"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:paddingTop="5dp"
+                            android:text="Minimum Order"
+                            android:textColor="@android:color/white"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/chefKithenEditMinimumOrder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/login_txtfld"
+                            android:ems="10"
+                            android:hint="Enter minimum Order"
+                            android:inputType="number"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textCursorDrawable="@null"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:paddingTop="5dp"
+                            android:text="Delivery Fee"
+                            android:textColor="@android:color/white"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/chefKithenEditDeliveryFee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/login_txtfld"
+                            android:ems="10"
+                            android:hint="Enter delivery Fee"
+                            android:inputType="number"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textCursorDrawable="@null"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:paddingTop="5dp"
+                            android:text="Delivery zone by radius km/miles"
+                            android:textColor="@android:color/white"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/chefKithenEditDeliveryzonebyradiuskmmiles"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/login_txtfld"
+                                android:ems="10"
+                                android:hint="Enter delivery zone by radius km/miles"
+                                android:inputType="number"
+                                android:padding="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textCursorDrawable="@null"
+                                android:textSize="15sp"
+                                android:layout_marginRight="2dp"
+                                android:layout_weight=".8"/>
+                            <Spinner
+                                android:id="@+id/chefKithenEditSelectDeliveryzonebyradiuskmmiles"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/login_txtfld"
+                                android:entries="@array/countryArray"
+                                android:padding="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:layout_weight="1.2"/>
+
+                        </LinearLayout>
+
+                        <!--<EditText
+                            android:id="@+id/chefKithenEditDeliveryzonebyradiuskmmiles"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:background="@mipmap/login_txtfld"
+                            android:ems="10"
+                            android:hint="Enter delivery zone by radius km/miles"
+                            android:inputType="text"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textCursorDrawable="@null"
+                            android:textSize="15sp" />
+                        <Spinner
+                            android:id="@+id/chefKithenEditSelectDeliveryzonebyradiuskmmiles"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@mipmap/login_txtfld"
+                            android:entries="@array/countryArray"
+                            android:padding="5dp"
+                            android:layout_marginBottom="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp">
+                            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:tools="http://schemas.android.com/tools"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/map"
+                                tools:context=".MapsActivity"
+                                android:name="com.google.android.gms.maps.SupportMapFragment" />
+                        </LinearLayout>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Map"
+                            android:visibility="gone"
+                            android:id="@+id/btn_map"/>
+
+
+                        <!--upload logo and photo...-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginBottom="3dp"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp"
+                                android:paddingTop="5dp"
+                                android:text="Upload"
+                                android:textColor="@android:color/white"
+                                android:textSize="15sp" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="#cccccc"
+                                android:id="@+id/kitchen_logo"/>
+
+                            <Button
+                                android:id="@+id/chefKithenuploadphoto"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@mipmap/login_txtfld"
+                                android:text="Chose Photo"
+                                android:ems="10"
+                                android:inputType="number"
+                                android:padding="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textCursorDrawable="@null"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
+
+                        <Button
+                            android:id="@+id/btnChefKithenEdit"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="3dp"
+                            android:background="@mipmap/next"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="5dp"
+                            android:text="Edit"
+                            android:textColor="#ffffff"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="12sp" />
+                    </FrameLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="#ffffff"
+    android:orientation="horizontal"
+    android:paddingBottom="3dp">
+
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+        android:id="@+id/item_img"
+        android:background="#cccccc"
+        android:layout_marginLeft="5sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/ll_details"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@+id/item_img"
+        android:layout_marginLeft="5dp">
+
+
+    <TextView
+        android:id="@+id/lblListItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Demo"
+        android:textSize="14dip"
+        android:paddingTop="2dp"
+        android:paddingBottom="0dp"/>
+    <TextView
+        android:id="@+id/lblListItem2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblListItem"
+        android:text="Demo"
+        android:textSize="13dip"
+        android:paddingTop="2dp"
+        android:paddingBottom="0dp" />
+    <TextView
+        android:id="@+id/lblListItem3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblListItem2"
+        android:text="Demo"
+        android:textSize="13dip"
+        android:paddingTop="2dp"
+        android:paddingBottom="0dp" />
+
+    </LinearLayout>
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:id="@+id/btn_add_to_cart"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Add to Cart"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:background="#96B100"/>
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:id="@+id/btn_option"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Options"
+        android:visibility="gone"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:background="#96B100"/>
+
+</RelativeLayout>

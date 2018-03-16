@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/title_txt"
+        android:gravity="center"
+        android:text="Checkout !"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:background="#96B100"
+        android:scaleType="fitCenter" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/title_txt">
+
+        <RadioButton
+            android:id="@+id/Quick_Checkout_No_Sign_In"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quick Checkout - No Sign In"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/New_customer_Registration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Customer - Register"
+             />
+
+        <RadioButton
+            android:id="@+id/Already_a_customer_Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already a Customer - Login" />
+
+
+
+    </RadioGroup>
+
+
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="OK"
+        android:id="@+id/btn_ok"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_below="@+id/radio_group"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="#FCB817"
+        android:textSize="18sp"
+        android:textColor="#000000" />
+
+</RelativeLayout>
+
+

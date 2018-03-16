@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="65dp"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Veg"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:id="@+id/dialog_option_item_name"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="40INR"
+                android:textSize="14sp"
+                android:id="@+id/dialog_option_item_price"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="35INR"
+                android:textSize="14sp"
+                android:id="@+id/dialog_option_item_sale"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:text="5"
+            android:visibility="gone"
+            android:textSize="18sp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:id="@+id/slno"/>
+
+
+
+        <CheckBox
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="4dp"
+            android:id="@+id/checkbox_btn"/>
+
+    </LinearLayout>
+
+</LinearLayout>

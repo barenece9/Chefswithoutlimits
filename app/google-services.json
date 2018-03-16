@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "89978713868",
+    "firebase_url": "https://chefswithoutlimits.firebaseio.com",
+    "project_id": "chefswithoutlimits",
+    "storage_bucket": "chefswithoutlimits.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89978713868:android:5b87d97f6c2c2a17",
+        "android_client_info": {
+          "package_name": "com.chefswithoutlimits"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89978713868-jgloaqkvt52hrp9sa3b9hfd3pvi3su65.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKrsXBlTX0XLKNRxCmoupglt4h5lFeOB4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

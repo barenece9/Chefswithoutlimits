@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:gravity="center_vertical"
+
+        android:orientation="horizontal">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:text="5"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:background="#cccccc"
+            android:scaleType="fitXY"
+            android:id="@+id/img_item"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="kichen_name"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:textColor="#6562F1"
+                android:id="@+id/kichen_name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="status"
+                android:textSize="14sp"
+                android:textColor="#96B100"
+                android:visibility="gone"
+                android:id="@+id/status"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Chef"
+                android:textSize="14sp"
+
+                android:singleLine="true"
+                android:id="@+id/type"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Distance"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:id="@+id/distance"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="address"
+                android:singleLine="true"
+                android:textSize="13sp"
+                android:id="@+id/address"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="description"
+                    android:layout_marginRight="5dp"
+                    android:textSize="13sp"
+                    android:singleLine="true"
+                    android:id="@+id/description"
+                    android:visibility="gone"/>
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:stepSize="0.5"
+                android:textSize="15sp"
+                android:progressTint="#FFCA33"
+                style = "?android:attr/ratingBarStyleSmall"
+                android:id="@+id/ratting"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

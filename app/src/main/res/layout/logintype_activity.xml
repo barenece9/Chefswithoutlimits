@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/inner_bg"
+    android:orientation="vertical" >
+    
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"        
+        layout="@layout/header_item" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="false"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="108dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btnloginChef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/chef_login"
+            android:paddingLeft="25dp"
+            android:scaleType="centerCrop"
+            android:text="CHEF LOGIN"
+            android:textColor="@color/button_text"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/btnloginCustomer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/customer_login"
+            android:paddingLeft="25dp"
+            android:scaleType="centerCrop"
+            android:text="CUSTOMER LOGIN"
+            android:textColor="@color/button_text"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="105dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:background="#A71F23">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:text="Add Tip"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:paddingLeft="5dp"
+                android:gravity="center"/>
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:id="@id/btn_close"
+                android:background="@android:drawable/ic_menu_close_clear_cancel"/>
+        </RelativeLayout>
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:paddingLeft="8dp"
+            android:hint="Enter tip %"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:id="@+id/dialog_edit_text"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:id="@+id/dialog_btn_add_to_care"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="#96B100"
+            android:layout_gravity="center_horizontal"
+            android:text="Add"/>
+
+    </LinearLayout>
+</LinearLayout>

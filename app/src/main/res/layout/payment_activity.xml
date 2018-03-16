@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+   <!-- <TextView android:id="@+id/payment_form_title"
+              android:text="@string/addPayment"
+              style="@style/Header.Light" />-->
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_item" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:id="@+id/tv_payable_amount"
+        android:background="#FCB817"
+        android:textColor="#ffffff"
+        android:text="Amount Payable : 105.00 INR"/>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radio_payment_method">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#cccccc"
+            android:gravity="center_vertical"
+            android:layout_marginTop="3dp"
+            android:id="@+id/radio_new_card"
+            android:text="New Card"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#cccccc"
+            android:gravity="center_vertical"
+            android:layout_marginTop="3dp"
+            android:id="@+id/radio_old_card"
+            android:visibility="gone"
+            android:text="Save Card"/>
+    </RadioGroup>
+
+
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/ll_new_card"
+    android:visibility="gone">
+
+
+        <com.stripe.android.view.CardInputWidget
+            android:id="@+id/card_input_widget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/check_box_save_card"
+            android:layout_margin="3dp"
+            android:text="Save this card for faster transaction"/>
+
+</LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/ll_save_card"
+        android:visibility="gone"
+        android:layout_marginRight="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_card"
+            android:src="@drawable/card_atm"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_card_last_4"
+            android:paddingLeft="10dp"
+            android:text="Card : ******************"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/img_card"
+            android:layout_toEndOf="@+id/img_card" />
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/btn_clear_card"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_close_light" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_height="40dp"
+        android:layout_width="140dp"
+        android:background="@color/colorPrimary"
+        android:text="Pay"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:textColor="#ffffff"/>
+
+
+
+
+    <!--<Button
+        android:id="@+id/saverx"
+        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:text="@string/saverx"
+        />
+
+    <Button
+        android:id="@+id/saveWithService"
+        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:text="@string/saveService"
+        />-->
+
+   <!-- <TextView android:id="@+id/token_list_title"
+              android:text="@string/paymentMethods"
+              android:layout_marginTop="12dp"
+              style="@style/Header.Light" />-->
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:layout_weight="1"/>
+
+</LinearLayout>

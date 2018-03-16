@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/title_txt"
+        android:gravity="center"
+        android:text="Confirmation !"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:background="#96B100"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/tv_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Order placed successfully Please Provide Order Code IYU8H8 to Receive Your Order"
+        android:layout_below="@+id/title_txt">
+    </TextView>
+
+
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="OK"
+        android:id="@+id/btn_ok"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_below="@+id/tv_body"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="#FCB817"
+        android:textSize="18sp"
+        android:textColor="#000000" />
+
+</RelativeLayout>
+
+
+
